@@ -1,4 +1,4 @@
-# Find-difference-in-days-between-two-given-dates-as-strings
+# Find-days-difference-between-two-given-dates-as-strings
 using ONLY " GregorianCalendar " utility. No additional libraries needed. No additional parses needed.
 Just splitted the strings and separeted days, months and years.
 
