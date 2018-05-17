@@ -1,6 +1,6 @@
 import java.util.GregorianCalendar;
 
-public class Main {
+public class DifferenceInDays {
 	public static void main(String[] args) {
 		String date1 = "1-1-2016";
 		String date2 = "1-1-2017";
@@ -26,6 +26,8 @@ public class Main {
 		System.out.println("Total days difference between " + date1 + " and " + date2 + " : " + differenceDays);
 	}
 	
+  
+  
 	private static int howManyLeapYearsBetweenTwoYears(int year1, int year2) {
 		int leap = 0;
 		
@@ -48,10 +50,14 @@ public class Main {
 		return leap;
 	}
 	
+  
+  
 	private static boolean isLeapYear(int year) {
 		return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
 	}
 	
+  
+  
 	private static long getDiffDaysBetweenTwoMonths(MyDate myDate1, MyDate myDate2) {
 		if (myDate1.getMonth() == myDate2.getMonth()) {
 			return 0;
@@ -74,12 +80,18 @@ public class Main {
 		return (dateWithSmallerMonth == myDate1) ? -totalDays : totalDays;
 	}
 	
+  
+  
 	private static int getDaysOfMonth(MyDate myDate, int nextYear) {
 		GregorianCalendar date = new GregorianCalendar(myDate.getYear(), nextYear -1, myDate.getDay());
 		
 		return date.getActualMaximum(GregorianCalendar.DAY_OF_MONTH);
 	}
 }
+
+
+
+/////////////	MyDate Class	/////////////
 
 class MyDate {
 	private int day;
